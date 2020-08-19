@@ -10,6 +10,10 @@
     font-size: 1.4rem;
 }
 
+.option-block {
+    background: var(--color-primary-light);
+}
+
 .select-block select {
     width: 100%;
     height: 5.6rem;

@@ -5,7 +5,8 @@ import TeacherItem, { Teacher } from '../../components/TeacherItem';
 import Input from '../../components/Input';
 import Select from '../../components/Select';
 
-import searchIcon from '../../assets/images/icons/search.png'
+import searchIcon from '../../assets/images/icons/search.png';
+import geekIcon from '../../assets/images/icons/geek.svg';
 
 import './style.css';
 import api from '../../services/api';
@@ -34,7 +35,15 @@ function TeacherList(){
 
     return(
         <div id="page-teacher-list" className="container">
-            <PageHeader title="Estes são os proffys disponíveis.">
+            <PageHeader 
+                title="Estes são os proffys disponíveis."
+                info={
+                    <div className="header-infoList">
+                        <img src={geekIcon} alt="Foguete verde"/>&nbsp;&nbsp;
+                        <p>Nós temos 32 <br />professores.</p>
+                    </div>
+                }
+            >
                 <form id="search-teachers" onSubmit={searchTeachers}>
                     <Select
                         name="subject" 

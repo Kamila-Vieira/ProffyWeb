@@ -3,12 +3,14 @@ import { Link } from 'react-router-dom';
 
 import logoImg from '../../assets/images/logo.svg'
 import backIcon from '../../assets/images/icons/back.svg'
+//import greenRocket from '../../assets/images/icons/green-rocket.svg';
 
 import './style.css'
 
 interface PageHeaderProps{
     title: string;
     description?: string;
+    info?: any;
 }
 
 const PageHeader: React.FC <PageHeaderProps> = (props) => {
@@ -22,9 +24,15 @@ const PageHeader: React.FC <PageHeaderProps> = (props) => {
                 </div>
                 <div className="header-content">
                     <strong>{props.title}</strong>
-                    {props.description && <p>{props.description}</p>}
+                    <div className="header-children">
+                        <div className="header-title">
+                            {props.description && <p>{props.description}</p>}
+                        </div>
+                        {props.info}
+                    </div>
                     {props.children}
                 </div>
+                
             </header>
     );
 }

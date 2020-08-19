@@ -9,7 +9,8 @@ import api from '../../services/api';
 
 import './style.css';
 
-import warningIcon from '../../assets/images/icons/warning.svg'
+import warningIcon from '../../assets/images/icons/warning.svg';
+import greenRocketIcon from '../../assets/images/icons/green-rocket.svg';
 
 
 function TeacherForm(){
@@ -80,8 +81,15 @@ function TeacherForm(){
                 title="Que incrível que você quer dar aulas."
                 description="O primeiro passo, é preencher esse
                     formulário de inscrição."
+                info={
+                    <div className="header-infoForm">
+                        <img src={greenRocketIcon} alt="Foguete verde"/>&nbsp;&nbsp;
+                        <p>Preparare-se! <br />vai ser o máximo.</p>
+                    </div>
+                }
             />
             <main>
+                    
                 <form onSubmit={handleCreateClass}>
                     <fieldset>
                         <legend>Seus dados</legend>
