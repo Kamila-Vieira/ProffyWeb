@@ -1,0 +1,70 @@
+#page-registrationSaved {
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: var(--color-text-in-primary);
+    background: var(--color-primary);
+    
+}
+
+#page-registrationSaved-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.page-background {
+    background-image: url("../../assets/images/success-background.svg");
+    background-size: 100%;
+    width: 1120px;
+    height: 563px;
+}
+
+#page-registrationSaved-content .container {
+    text-align: center;
+    
+}
+
+#page-registrationSaved-content .container h1 {
+    font: 700 4.0rem Archivo;
+    color: var(--color-title-in-primary);
+    margin-top: 3rem;
+}
+
+.saved-subtitle {
+    margin-top: 2rem;
+    line-height: 3rem;
+    margin-bottom: 8rem;
+}
+
+.button-List {
+    width: 17.6rem;
+    height: 5.6rem;
+    background: var(--color-secondary);
+    color: var(--color-button-text);
+    border: 0;
+    border-radius: 0.8rem;
+    cursor: pointer;
+    font: 700 1.6rem Archivo;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: background-color 0.2s;
+    margin: 0 auto;
+}
+
+.button-List:hover {
+    background: var(--color-secondary-dark);
+}
+
+@media(min-width: 1100px) {
+   
+    #page-registrationSaved-content .container h1 {
+        font-size: 5.4rem;
+    }
+}

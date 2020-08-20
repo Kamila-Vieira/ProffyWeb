@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, FormEvent } from 'react';
 
 import WhatsappIcon from '../../assets/images/icons/whatsapp.svg';
 
@@ -13,6 +13,11 @@ export interface Teacher {
     name: string;
     subject: string;
     whatsapp: string;
+    schedule:{
+        week_day: number,
+        from: string,
+        to: string,
+    };
 }
 
 interface TeacherPropos{
@@ -26,7 +31,7 @@ const TeacherItem: React.FC<TeacherPropos> = ({ teacher }) => {
             user_id: teacher.id,
         })
     }
-
+    
     return(
         <article className="teacher-item">
             <header>
@@ -39,6 +44,52 @@ const TeacherItem: React.FC<TeacherPropos> = ({ teacher }) => {
 
             <p>{teacher.bio}</p>
 
+            <div className="schedule-list">
+                <div className="list">
+                    <div className="schedule">
+                        <p>Dia</p>
+                        <h2>Domingo</h2>        
+                        <p>Horário</p>
+                        <h2>8h - 12h</h2>
+                    </div>
+                    <div className="schedule">
+                        <p>Dia</p>
+                        <h2>Segunda</h2>        
+                        <p>Horário</p>
+                        <h2>8h - 12h</h2>
+                    </div>
+                    <div className="schedule">
+                        <p>Dia</p>
+                        <h2>Terça</h2>        
+                        <p>Horário</p>
+                        <h2>8h - 12h</h2>
+                    </div>
+                    <div className="schedule">
+                        <p>Dia</p>
+                        <h2>Quarta</h2>        
+                        <p>Horário</p>
+                        <h2>8h - 12h</h2>
+                    </div>
+                    <div className="schedule">
+                        <p>Dia</p>
+                        <h2>Quinta</h2>        
+                        <p>Horário</p>
+                        <h2>8h - 12h</h2>
+                    </div>
+                    <div className="schedule">
+                        <p>Dia</p>
+                        <h2>Sexta</h2>        
+                        <p>Horário</p>
+                        <h2>8h - 12h</h2>
+                    </div>
+                    <div className="schedule">
+                        <p>Dia</p>
+                        <h2>Sábado</h2>        
+                        <p>Horário</p>
+                        <h2>8h - 12h</h2>
+                    </div>
+                </div>
+            </div>
             <footer>
                 <p>
                     Preço/Hora

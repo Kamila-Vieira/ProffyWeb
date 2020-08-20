@@ -31,9 +31,9 @@ function Landing (){
                     <h2>Sua Plataforma de Estudos Online. </h2>
                 </div>
                 <img 
-                src={landingImg} 
-                alt="Plataforma de Estudos" 
-                className="hero-image"
+                    src={landingImg} 
+                    alt="Plataforma de Estudos" 
+                    className="hero-image"
                 />
                 <div className="buttons-container">
                     <Link to="/study" className="study">

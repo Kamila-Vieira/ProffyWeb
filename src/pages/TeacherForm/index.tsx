@@ -1,5 +1,5 @@
 import React, { useState, FormEvent } from 'react';
-import { useHistory } from 'react-router-dom';
+import { useHistory, Link } from 'react-router-dom';
 
 import PageHeader from '../../components/PageHeader';
 import Input from '../../components/Input';
@@ -212,9 +212,9 @@ function TeacherForm(){
                             Importante! <br />
                             Preencha todos os dados
                         </p>
-                        <button type="submit">
+                        <Link to="/registration-saved" type="submit" className="button">
                             Salvar Cadastro
-                        </button>
+                        </Link>
                     </footer>
                 </form>
             </main>

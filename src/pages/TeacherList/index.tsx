@@ -1,4 +1,4 @@
-import React, { useState, FormEvent } from 'react';
+import React, { useState, FormEvent, useEffect } from 'react';
 
 import PageHeader from '../../components/PageHeader';
 import TeacherItem, { Teacher } from '../../components/TeacherItem';
@@ -6,13 +6,23 @@ import Input from '../../components/Input';
 import Select from '../../components/Select';
 
 import searchIcon from '../../assets/images/icons/search.png';
-import geekIcon from '../../assets/images/icons/geek.svg';
+import smileIcon from '../../assets/images/icons/smile.svg';
 
 import './style.css';
 import api from '../../services/api';
 
 
 function TeacherList(){
+    const [ totalUsers, setTotalUsers ] = useState(0);
+
+    useEffect(() => {
+        api.get('users')
+        .then(response => {
+            const {total} = response.data;
+            setTotalUsers(total);
+        })
+    }, []);
+
     const [teachers, setTeachers] = useState([]);
 
     const [subject, setSubject] = useState('');
@@ -39,8 +49,8 @@ function TeacherList(){
                 title="Estes são os proffys disponíveis."
                 info={
                     <div className="header-infoList">
-                        <img src={geekIcon} alt="Foguete verde"/>&nbsp;&nbsp;
-                        <p>Nós temos 32 <br />professores.</p>
+                        <img src={smileIcon} alt="Foguete verde"/>&nbsp;&nbsp;
+                        <p>Nós temos {totalUsers} <br />professores.</p>
                     </div>
                 }
             >
