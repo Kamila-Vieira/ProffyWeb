@@ -78,16 +78,15 @@ function TeacherForm(){
     return(
         <div id="page-teacher-form" className="container">
             <PageHeader
-                title="Que incrível que você quer dar aulas."
-                description="O primeiro passo, é preencher esse
-                    formulário de inscrição."
+                title="Kamila Vieira"
+                description="Química"
                 info={
                     <div className="header-infoForm">
                         <img src={greenRocketIcon} alt="Foguete verde"/>&nbsp;&nbsp;
                         <p>Preparare-se! <br />vai ser o máximo.</p>
                     </div>
                 }
-                page="Dar aulas"
+                page="Meu perfil"
             />
             <main>
                     

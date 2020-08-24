@@ -11,6 +11,7 @@ interface PageHeaderProps{
     title: string;
     description?: string;
     info?: any;
+    page: string;
 }
 
 const PageHeader: React.FC <PageHeaderProps> = (props) => {
@@ -20,6 +21,7 @@ const PageHeader: React.FC <PageHeaderProps> = (props) => {
                     <Link to="/">
                         <img src={backIcon} alt="Voltar"/>
                     </Link>
+                    <h2>{props.page}</h2>
                     <img src={logoImg} alt="Logo Proffy"/>
                 </div>
                 <div className="header-content">

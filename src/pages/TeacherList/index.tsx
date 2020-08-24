@@ -53,6 +53,7 @@ function TeacherList(){
                         <p>Nós temos {totalUsers} <br />professores.</p>
                     </div>
                 }
+                page="Estudar"
             >
                 <form id="search-teachers" onSubmit={searchTeachers}>
                     <Select

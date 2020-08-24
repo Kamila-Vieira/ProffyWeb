@@ -4,7 +4,6 @@ import WhatsappIcon from '../../assets/images/icons/whatsapp.svg';
 
 import './style.css';
 import api from '../../services/api';
-import TeacherSchedule from '../TeacherSchedule';
 
 export interface Teacher {
     id: number;
