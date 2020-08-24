@@ -1,9 +1,10 @@
-import React, { useState, FormEvent } from 'react';
+import React from 'react';
 
 import WhatsappIcon from '../../assets/images/icons/whatsapp.svg';
 
 import './style.css';
 import api from '../../services/api';
+import TeacherSchedule from '../TeacherSchedule';
 
 export interface Teacher {
     id: number;
@@ -32,6 +33,28 @@ const TeacherItem: React.FC<TeacherPropos> = ({ teacher }) => {
         })
     }
     
+/*     function setSchedule(){
+        if (teacher.schedule.week_day === 1) {
+            return (
+                <div className="schedule">
+                    <p>Dia</p>
+                    <h2>Segunda</h2>        
+                    <p>Horário</p>
+                    <h2> </h2>
+                </div>
+            );
+        } else {
+            return (
+                <div className="scheduleNull">
+                    <p>Dia</p>
+                    <h2>Segunda</h2>        
+                    <p>Horário</p>
+                    <h2>-</h2>
+                </div>
+            );
+        }
+    } */
+
     return(
         <article className="teacher-item">
             <header>
@@ -43,20 +66,14 @@ const TeacherItem: React.FC<TeacherPropos> = ({ teacher }) => {
             </header>
 
             <p>{teacher.bio}</p>
-
+            {/* <TeacherSchedule/> */}
             <div className="schedule-list">
                 <div className="list">
                     <div className="schedule">
                         <p>Dia</p>
-                        <h2>Domingo</h2>        
-                        <p>Horário</p>
-                        <h2>8h - 12h</h2>
-                    </div>
-                    <div className="schedule">
-                        <p>Dia</p>
                         <h2>Segunda</h2>        
                         <p>Horário</p>
-                        <h2>8h - 12h</h2>
+                        <h2>-</h2>
                     </div>
                     <div className="schedule">
                         <p>Dia</p>
@@ -79,12 +96,6 @@ const TeacherItem: React.FC<TeacherPropos> = ({ teacher }) => {
                     <div className="schedule">
                         <p>Dia</p>
                         <h2>Sexta</h2>        
-                        <p>Horário</p>
-                        <h2>8h - 12h</h2>
-                    </div>
-                    <div className="schedule">
-                        <p>Dia</p>
-                        <h2>Sábado</h2>        
                         <p>Horário</p>
                         <h2>8h - 12h</h2>
                     </div>

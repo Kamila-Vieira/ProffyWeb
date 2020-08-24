@@ -183,7 +183,7 @@ function TeacherForm(){
                                     {value: '4', label: 'Quinta-feira'},
                                     {value: '5', label: 'Sexta-feira'},
                                     {value: '6', label: 'Sábado-feira'},
-                                    ]}
+                                ]}
                             />
                             <Input 
                                 type="time" 
