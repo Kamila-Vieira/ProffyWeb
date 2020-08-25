@@ -1,7 +1,6 @@
 import React, { useState, FormEvent } from 'react';
 import { useHistory, Link } from 'react-router-dom';
 
-import PageHeader from '../../components/PageHeader';
 import Input from '../../components/Input';
 import Textarea from '../../components/Textarea';
 import Select from '../../components/Select';
@@ -10,10 +9,11 @@ import api from '../../services/api';
 import './style.css';
 
 import warningIcon from '../../assets/images/icons/warning.svg';
-import greenRocketIcon from '../../assets/images/icons/green-rocket.svg';
+import logoImg from '../../assets/images/logo.svg'
+import backIcon from '../../assets/images/icons/back.svg'
 
 
-function TeacherForm(){
+function MyProfile(){
     const history = useHistory();
 
     const [name, setName] = useState('');
@@ -76,18 +76,23 @@ function TeacherForm(){
     }
 
     return(
-        <div id="page-teacher-form" className="container">
-            <PageHeader
-                title="Kamila Vieira"
-                description="Química"
-                info={
-                    <div className="header-infoForm">
-                        <img src={greenRocketIcon} alt="Foguete verde"/>&nbsp;&nbsp;
-                        <p>Preparare-se! <br />vai ser o máximo.</p>
-                    </div>
-                }
-                page="Meu perfil"
-            />
+        <div id="page-my-profile" className="container">
+            <header className="page-header">
+                <div className="top-bar-container">
+                    <Link to="/">
+                        <img src={backIcon} alt="Voltar"/>
+                    </Link>
+                    <h2>Dar Aulas</h2>
+                    <img src={logoImg} alt="Logo Proffy"/>
+                </div>
+                <div className="avatar-container">
+                    <img src={'https://avatars1.githubusercontent.com/u/60486364?s=460&u=62d7a70278f4484b041cd2c6658b4f2075b748e3&v=4'} alt="Kamila"/>
+                </div>
+                <div className="header-content">
+                    <strong>Kamila Vieira</strong>
+                    <p>Química</p>
+                </div>
+            </header>
             <main>
                     
                 <form onSubmit={handleCreateClass}>
@@ -222,4 +227,4 @@ function TeacherForm(){
     )
 }
 
-export default TeacherForm;
+export default MyProfile;
