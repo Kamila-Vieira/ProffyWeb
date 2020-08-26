@@ -6,8 +6,20 @@
     margin-top: 1.4rem;
 }
 
-.textarea-block label {
+.textarea-block .label-block {
+    display: flex;
+    align-items: flex-end;
+}
+
+.textarea-block .label-block label {
     font-size: 1.4rem;
+}
+
+.textarea-block .label-block p {
+    font-size: 1.2rem;
+    margin-left: 13px;
+    color: var(--color-label-text);
+    padding-bottom: 0.2rem;
 }
 
 .textarea-block textarea {

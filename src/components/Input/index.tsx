@@ -4,7 +4,7 @@ import './style.css';
 
 interface InputProps extends InputHTMLAttributes<HTMLInputElement>{
     label: string;
-    descrip: string;
+    descrip?: string;
     name: string;
 } 
 

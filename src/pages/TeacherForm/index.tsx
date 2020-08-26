@@ -97,8 +97,7 @@ function TeacherForm(){
 
                         <Input
                             name="name"
-                            label="Nome Completo"
-                            descrip="" 
+                            label="Nome Completo" 
                             value={name}
                             onChange={(e) => { setName(e.target.value)}}
                         />
@@ -190,7 +189,6 @@ function TeacherForm(){
                                 type="time" 
                                 name="from" 
                                 label="Das"
-                                descrip=""
                                 value={scheduleItem.from}
                                 onChange={(e) => setScheduleItemValue(index, 'from', e.target.value)}
                             />
@@ -198,7 +196,6 @@ function TeacherForm(){
                                 type="time" 
                                 name="to" 
                                 label="Até"
-                                descrip=""
                                 value={scheduleItem.to}
                                 onChange={(e) => setScheduleItemValue(index, 'to', e.target.value)}
                             />

@@ -8,15 +8,15 @@
 
     color: var(--color-text-in-primary);
     background: var(--color-primary);
-    
-    padding: 2rem;
+
+    position: relative;
 }
 
 .landing-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 3rem;
+    padding: 2.2rem 0;
 }
 
 .avatar-container {
@@ -28,12 +28,13 @@
     width: 6rem;
     height: 6rem;
     border-radius: 50%;
-    margin-right: 2rem;
+    margin-right: 1rem;
 }
 
 .landing-body {
     display: row;
     margin-bottom: 4rem;
+    color: var(--color-text-in-primary);
 }
 
 .logo-container img {
@@ -132,13 +133,18 @@
 
 @media(min-width: 1100px){
     #page-landing{
-        height: 100vh;
-        padding:5em;
+       height: 25em;
+       color: var(--color-text-base);
+      
     }
 
     #page-landing-content{
         max-width: 1100px;
-        height: 35em;
+        
+    }
+
+    .landing-header {
+        padding-top: 9rem;
     }
 
     .landing-body {
@@ -152,14 +158,17 @@
         text-align: left;
         margin-right: 7rem;
     }
+
     .logo-container h2{
         text-align: initial;
         font-size: 3.2rem;
     }
+
     .logo-container img{
         height: 100%;
         
     }
+
     .hero-image{
         justify-self: end;
         
@@ -177,13 +186,11 @@
         text-align: start;
     }
 
-    .welcome-container strong {
-        color: var(--color-text-base);
-    }
 
     .total-connections{
         justify-self: end;
         font-size: 1.3rem;
+        
     }
 
     .buttons-container{       

@@ -1,5 +1,5 @@
 import React, { useState, FormEvent } from 'react';
-import { useHistory, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 import Input from '../../components/Input';
 import Textarea from '../../components/Textarea';
@@ -9,15 +9,14 @@ import api from '../../services/api';
 import './style.css';
 
 import warningIcon from '../../assets/images/icons/warning.svg';
-import logoImg from '../../assets/images/logo.svg'
-import backIcon from '../../assets/images/icons/back.svg'
+// import cameraIcon from '../../assets/images/icons/cameraIcon.svg'
+import PageHeader from '../../components/PageHeader';
 
 
 function MyProfile(){
-    const history = useHistory();
-
     const [name, setName] = useState('');
-    const [avatar, setAvatar] = useState('');
+    const [lastName, setLastName] = useState('');
+    const [email, setEmail] = useState('');
     const [whatsapp, setWhatsapp] = useState('');
     const [bio, setBio] = useState('');
 
@@ -51,81 +50,74 @@ function MyProfile(){
 
         api.post('classes', {
             name,
-            avatar,
             whatsapp,
             bio,
             subject,
             cost,
             schedule: scheduleItems,
-        }).then(() => {
-            alert('Cadastro realizado com sucesso!');
-            history.push('/');
-        }).catch(() => {
-            alert('Erro no Cadastro!');
-        }) 
-
-        console.log({
-            name,
-            avatar,
-            whatsapp,
-            bio,
-            subject,
-            cost,
-            scheduleItems
         });
     }
 
     return(
         <div id="page-my-profile" className="container">
-            <header className="page-header">
-                <div className="top-bar-container">
-                    <Link to="/">
-                        <img src={backIcon} alt="Voltar"/>
-                    </Link>
-                    <h2>Dar Aulas</h2>
-                    <img src={logoImg} alt="Logo Proffy"/>
-                </div>
-                <div className="avatar-container">
-                    <img src={'https://avatars1.githubusercontent.com/u/60486364?s=460&u=62d7a70278f4484b041cd2c6658b4f2075b748e3&v=4'} alt="Kamila"/>
-                </div>
-                <div className="header-content">
-                    <strong>Kamila Vieira</strong>
-                    <p>Química</p>
-                </div>
-            </header>
+            <PageHeader
+                avatar= {
+                    <> 
+                        <img
+                            src={'https://avatars1.githubusercontent.com/u/60486364?s=460&u=62d7a70278f4484b041cd2c6658b4f2075b748e3&v=4'} 
+                            alt="Kamila"
+                        />
+                        {/* <a href="" >
+                            <img src={cameraIcon} alt="câmera"/>
+                        </a> */}
+                    </>
+                }
+                title="Kamila Vieira"
+                description="Química"
+                page="Meu perfil"
+            />
             <main>
                     
                 <form onSubmit={handleCreateClass}>
                     <fieldset>
                         <legend>Seus dados</legend>
+                            <div className="name-container">
+                                <Input
+                                    name="name"
+                                    label="Nome"
+                                    placeholder={name} 
+                                    value={name}
+                                    onChange={(e) => { setName(e.target.value)}}
+                                />
 
-                        <Input
-                            name="name"
-                            label="Nome Completo"
-                            descrip="" 
-                            value={name}
-                            onChange={(e) => { setName(e.target.value)}}
-                        />
-                        
-                        <Input
-                            name="avatar" 
-                            label="Link da sua foto"
-                            descrip="(comece com //http)"
-                            value={avatar}
-                            onChange={(e) => { setAvatar(e.target.value)}} 
-                        />
+                                <Input
+                                    name="lastName"
+                                    label="Sobrenome" 
+                                    value={lastName}
+                                    onChange={(e) => { setLastName(e.target.value)}}
+                                />
+                            </div>
 
-                        <Input
-                            name="whatsapp" 
-                            label="Whatsapp"
-                            descrip="(com DDI e DDD, somente números)"
-                            value={whatsapp}
-                            onChange={(e) => { setWhatsapp(e.target.value)}}
-                        />
+                            <div className="contact-container">
+                                <Input
+                                    name="email" 
+                                    label="E-mail"
+                                    value={email}
+                                    onChange={(e) => { setEmail(e.target.value)}}
+                                />
 
+                                <Input
+                                    name="whatsapp" 
+                                    label="Whatsapp"
+                                    placeholder={whatsapp}
+                                    value={whatsapp}
+                                    onChange={(e) => { setWhatsapp(e.target.value)}}
+                                />
+                            </div>
                         <Textarea
                             name="bio" 
                             label="Biografia"
+                            descrip="(Máximo 300 caracteres)"
                             value={bio}
                             onChange={(e) => { setBio(e.target.value)}}
                         />
@@ -156,7 +148,6 @@ function MyProfile(){
                         <Input
                             name="cost"
                             label="Custo da sua hora por aula"
-                            descrip="(em R$)"
                             placeholder="R$"
                             value={cost}
                             onChange={(e) => { setCost(e.target.value)}}
@@ -194,7 +185,6 @@ function MyProfile(){
                                 type="time" 
                                 name="from" 
                                 label="Das"
-                                descrip=""
                                 value={scheduleItem.from}
                                 onChange={(e) => setScheduleItemValue(index, 'from', e.target.value)}
                             />
@@ -202,7 +192,6 @@ function MyProfile(){
                                 type="time" 
                                 name="to" 
                                 label="Até"
-                                descrip=""
                                 value={scheduleItem.to}
                                 onChange={(e) => setScheduleItemValue(index, 'to', e.target.value)}
                             />

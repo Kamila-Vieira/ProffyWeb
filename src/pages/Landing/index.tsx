@@ -33,7 +33,7 @@ function Landing (){
                         <Link to="/myprofile" className="avatar" >
                             <img src={'https://avatars1.githubusercontent.com/u/60486364?s=460&u=62d7a70278f4484b041cd2c6658b4f2075b748e3&v=4'} alt="Kamila"/>  
                         </Link>
-                        <p className="name">Kamila Vieira</p>
+                        <strong className="name">Kamila Vieira</strong>
                     </div>
                     <div className="exit-container">
                         <Link to="/" className="exit">
@@ -59,11 +59,9 @@ function Landing (){
                         <p>Seja bem vindo.</p>
                         <strong>O que deseja fazer?</strong>   
                     </div>
-                    <div className="connections">
-                        <span className="total-connections">
-                                Total de {totalConnections} Conexões já Realizadas.<img src={purpleHeartIcon} alt="Coração roxo"/>
-                        </span>
-                    </div>
+                    <span className="total-connections">
+                        Total de {totalConnections} Conexões já Realizadas.<img src={purpleHeartIcon} alt="Coração roxo"/>
+                    </span>
                     <div className="buttons-container">
                         <Link to="/study" className="study">
                             <img src={studyIcon} alt="Estudar"/>
