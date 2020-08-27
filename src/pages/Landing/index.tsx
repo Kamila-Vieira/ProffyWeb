@@ -30,7 +30,7 @@ function Landing (){
 
                 <div className="landing-header">
                     <div className="avatar-container">
-                        <Link to="/" className="avatar" >
+                        <Link to="/myprofile" className="avatar" >
                             <img src={'https://avatars1.githubusercontent.com/u/60486364?s=460&u=62d7a70278f4484b041cd2c6658b4f2075b748e3&v=4'} alt="Kamila"/>  
                         </Link>
                         <p className="name">Kamila Vieira</p>
