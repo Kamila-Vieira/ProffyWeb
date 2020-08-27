@@ -25,22 +25,22 @@ function Landing (){
     }, []);
     
     return (
-        
         <div id="page-landing">
             <div id="page-landing-content" className="container">
-                <header className="landing-header">
+
+                <div className="landing-header">
                     <div className="avatar-container">
-                        <Link to="/myprofile" className="avatar" >
+                        <Link to="/" className="avatar" >
                             <img src={'https://avatars1.githubusercontent.com/u/60486364?s=460&u=62d7a70278f4484b041cd2c6658b4f2075b748e3&v=4'} alt="Kamila"/>  
                         </Link>
-                        <strong className="name">Kamila Vieira</strong>
+                        <p className="name">Kamila Vieira</p>
                     </div>
                     <div className="exit-container">
                         <Link to="/" className="exit">
                             <img src={exitIcon} alt=""/>
                         </Link>
                     </div>
-                </header>
+                </div>
                 <div className="landing-body">
                     <div className="logo-container">
                         <img src={logoImg} alt="Proffy Logo"/>
@@ -53,15 +53,18 @@ function Landing (){
                         className="hero-image"
                     />
                 </div>
-                
-                <footer id="landing-footer">
+                <div className="landing-footer">
                     <div className="welcome-container">
-                        <p>Seja bem vindo.</p>
-                        <strong>O que deseja fazer?</strong>   
+                        <p className="welcome">
+                            Seja bem-vindo.<br />
+                            <strong>O que deseja fazer?</strong>
+                        </p>
+                        <span className="total-connections">
+                            Total de {totalConnections} Conexões já Realizadas.
+                            <img src={purpleHeartIcon} alt="Coração roxo"/>
+                        </span>
                     </div>
-                    <span className="total-connections">
-                        Total de {totalConnections} Conexões já Realizadas.<img src={purpleHeartIcon} alt="Coração roxo"/>
-                    </span>
+                    
                     <div className="buttons-container">
                         <Link to="/study" className="study">
                             <img src={studyIcon} alt="Estudar"/>
@@ -73,11 +76,9 @@ function Landing (){
                                 Dar aulas
                         </Link>
                     </div>
-                </footer>
+                </div>
             </div>
         </div>
-        
-        
     )
 }
 
