@@ -12,11 +12,11 @@ Proffy takes the pain out studying online by connecting teachers with students.
 ## Screenshots
 
 <div>
-  <img src="/src/assets/Screenshots/Landing.JPG" alt="Home" width="300"/>
-  <img src="/src/assets/Screenshots/Perfil.JPG" alt="Perfil" width="300"/>
-  <img src="/src/assets/Screenshots/DarAulas.JPG" alt="Dar Aulas" width="300"/>
-  <img src="/src/assets/Screenshots/ProffyFilters.JPG" alt="FiltroI" width="300"/>
-  <img src="/src/assets/Screenshots/ProffyFiltersII.JPG" alt="FiltroII" width="300"/>
+  <img src="/src/assets/Screenshots/Landing.JPG" alt="Home" width="500"/>
+  <img src="/src/assets/Screenshots/Perfil.JPG" alt="Perfil" width="500"/>
+  <img src="/src/assets/Screenshots/DarAulas.JPG" alt="Dar Aulas" width="500"/>
+  <img src="/src/assets/Screenshots/ProffyFilters.JPG" alt="FiltroI" width="500"/>
+  <img src="/src/assets/Screenshots/ProffyFiltersII.JPG" alt="FiltroII" width="500"/>
   <img src="/src/assets/Screenshots/Card.JPG" alt="Card" width="300"/>
 </div>
 
