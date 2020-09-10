@@ -2,7 +2,7 @@
 
 Web Proffy application 💜 developed during Rocketseat's #NLW immersive week :rocket:.
 
-<img src="/src/assets/Screenshots/ProffyWeb2.0.jpg"/>
+<img src="/src/assets/Screenshots/ProffyWeb2.0.JPG"/>
 
 ## About Proffy
 
@@ -12,12 +12,12 @@ Proffy takes the pain out studying online by connecting teachers with students.
 ## Screenshots
 
 <div>
-  <img src="/src/assets/Screenshots/Landing.jpg" alt="Home" width="200"/>
-  <img src="/src/assets/Screenshots/Perfil.jpg" alt="Perfil" width="200"/>
-  <img src="/src/assets/Screenshots/DarAulas.jpg" alt="Dar Aulas" width="200"/>
-  <img src="/src/assets/Screenshots/ProffyFilters.jpg" alt="FiltroI" width="200"/>
-  <img src="/src/assets/Screenshots/ProffyFiltersII.jpg" alt="FiltroII" width="200"/>
-  <img src="/src/assets/Screenshots/Card.jpg" alt="Card" width="200"/>
+  <img src="/src/assets/Screenshots/Landing.JPG" alt="Home" width="200"/>
+  <img src="/src/assets/Screenshots/Perfil.JPG" alt="Perfil" width="200"/>
+  <img src="/src/assets/Screenshots/DarAulas.JPG" alt="Dar Aulas" width="200"/>
+  <img src="/src/assets/Screenshots/ProffyFilters.JPG" alt="FiltroI" width="200"/>
+  <img src="/src/assets/Screenshots/ProffyFiltersII.JPG" alt="FiltroII" width="200"/>
+  <img src="/src/assets/Screenshots/Card.JPG" alt="Card" width="200"/>
   
 
 </div>
