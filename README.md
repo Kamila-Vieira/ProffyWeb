@@ -2,7 +2,7 @@
 
 Web Proffy application 💜 developed during Rocketseat's #NLW immersive week :rocket:.
 
-<img src="/src/assets/Screenshots/ProffyWeb2.0.png"/>
+<img src="/src/assets/img/Screenshots/ProffyWeb2.0.png"/>
 
 ## About Proffy
 
@@ -33,7 +33,7 @@ After this you have to install **Node.js**.
 
 > You can install Node.js from [here](https://nodejs.org/en/).
 
-Then configure your development environment from the ```.env.example``` file and install the dependencies from your project’s ```package.json``` file by running one of the following commands in the both repositories:
+Then configure your development environment, install the dependencies from your project’s ```package.json``` file by running the following command in the both repositories:
 ```
 npm install
 ```
