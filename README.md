@@ -2,7 +2,7 @@
 
 Web Proffy application 💜 developed during Rocketseat's #NLW immersive week :rocket:.
 
-<img src="/src/assets/img/Screenshots/ProffyWeb2.0.png"/>
+<img src="/src/assets/img/Screenshots/ProffyWeb2.0.png" alt="Proffy Banner"/>
 
 ## About Proffy
 
@@ -15,7 +15,7 @@ Proffy takes the pain out studying online by connecting teachers with students.
   <img src="/src/assets/Screenshots/Landing.JPG" alt="Home" width="350"/>
   <img src="/src/assets/Screenshots/Perfil.JPG" alt="Perfil" width="350"/>
   <img src="/src/assets/Screenshots/DarAulas.JPG" alt="Dar Aulas" width="350"/>
-  <img src="/src/assets/Screenshots/ProffyFilters.JPG" alt="FiltroI" width="350"/>
+  <img src="/src/assets/Screenshots/ProffyFilters.JPG" alt="Filtro" width="350"/>
 </div>
 
 ## Getting Started
