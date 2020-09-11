@@ -2,7 +2,7 @@
 
 Web Proffy application 💜 developed during Rocketseat's #NLW immersive week :rocket:.
 
-<img src="/src/assets/img/Screenshots/ProffyWeb2.0.png" alt="Proffy Banner"/>
+<img src="/src/assets/Screenshots/ProffyWeb2.0.png" alt="Proffy Banner"/>
 
 ## About Proffy
 
@@ -41,5 +41,6 @@ Finally, after installing the dependencies, the ```start``` script starts your "
 ```
 npm start
 ```
-That’s it! 💜
-If you have questions about Proffy Web, you can ask on [GitHub Issues](https://github.com/Kamila-Vieira/ProffyWeb/pulls).
+
+**That’s it! 💜<br />
+If you have questions about Proffy Web, you can ask on [GitHub Issues](https://github.com/Kamila-Vieira/ProffyWeb/pulls).**
