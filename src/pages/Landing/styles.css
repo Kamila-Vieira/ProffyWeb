@@ -8,8 +8,6 @@
 
     color: var(--color-text-in-primary);
     background: var(--color-primary);
-
-    position: relative;
 }
 
 .landing-header {
@@ -52,23 +50,20 @@
 
 .welcome-container {
     margin: 3rem auto;
-    display: grid;
+    display: flex;
     align-items: center;
-    grid-template-columns: 1fr 1fr;
 }
 
 .total-connections{
     font-size: 1.4rem;
-
     display: flex;
-    justify-content: center;
     align-items: center;
     margin-left: 1.1rem;
+    margin-top: 1rem;
 }
 
 .total-connections img {
     margin-left: 0.8rem;
-    margin-bottom: 2rem;
 }
 
 .buttons-container{
@@ -113,9 +108,12 @@
 
 
 @media(min-width: 1100px){
-
+        
     #page-landing-content{
         max-width: 1100px;
+        max-height: 700px;
+        
+        position: fixed;
         
         display: row;
         align-items: center;
@@ -123,7 +121,7 @@
     }
 
     .landing-header {
-        margin-top: 0.5rem;
+        margin-top: 3rem;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -159,20 +157,9 @@
     }
 
     .total-connections{
-        justify-self: end;
+        margin-top: 0;
         font-size: 1.3rem;
-        margin-left: 3.5rem;
-    }
-
-    .welcome-container {
-        justify-content: space-between;
-               
-    }
-
-    .total-connections img {
-        margin-bottom: 2rem;
-        margin-right: 5.2rem;
-        
+        margin-left: 2rem;
     }
 
     .buttons-container a {

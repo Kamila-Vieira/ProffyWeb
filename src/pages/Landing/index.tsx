@@ -54,15 +54,16 @@ function Landing (){
                     />
                 </div>
                 <div className="landing-footer">
+                    <span className="total-connections">
+                        Total de &nbsp; {totalConnections} &nbsp; Conexões já Realizadas.
+                        <img src={purpleHeartIcon} alt="Coração roxo"/>
+                    </span>
                     <div className="welcome-container">
                         <p className="welcome">
                             Seja bem-vindo.<br />
                             <strong>O que deseja fazer?</strong>
                         </p>
-                        <span className="total-connections">
-                            Total de {totalConnections} Conexões já Realizadas.
-                            <img src={purpleHeartIcon} alt="Coração roxo"/>
-                        </span>
+                        
                     </div>
                     
                     <div className="buttons-container">
